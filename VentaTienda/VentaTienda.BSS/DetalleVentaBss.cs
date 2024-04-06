@@ -37,13 +37,6 @@ namespace VentaTienda.BSS
         {
             return dal.DetalleVentaDatosDal();
         }
-        public DataTable DetalleVentaDatosVentasBss(int id)
-        {
-            return dal.DetalleVentaDatosVentasDal(id);
-        }
-        public DataTable DetalleVentaDatosDetalleBss(int id)
-        {
-            return dal.DetalleVentaDatosDetalleDal(id);
-        }
+     
     }
 }

@@ -33,14 +33,13 @@
             button2 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button4
             // 
             button4.DialogResult = DialogResult.OK;
-            button4.Location = new Point(341, 406);
+            button4.Location = new Point(434, 406);
             button4.Name = "button4";
             button4.Size = new Size(102, 23);
             button4.TabIndex = 13;
@@ -51,7 +50,7 @@
             // button3
             // 
             button3.DialogResult = DialogResult.OK;
-            button3.Location = new Point(190, 406);
+            button3.Location = new Point(226, 406);
             button3.Name = "button3";
             button3.Size = new Size(102, 23);
             button3.TabIndex = 12;
@@ -93,23 +92,11 @@
             dataGridView1.Size = new Size(776, 359);
             dataGridView1.TabIndex = 9;
             // 
-            // button5
-            // 
-            button5.DialogResult = DialogResult.OK;
-            button5.Location = new Point(504, 406);
-            button5.Name = "button5";
-            button5.Size = new Size(102, 23);
-            button5.TabIndex = 14;
-            button5.Text = "DATOS";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
             // DetalleVentaListarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -129,6 +116,5 @@
         private Button button2;
         private Button button1;
         private DataGridView dataGridView1;
-        private Button button5;
     }
 }

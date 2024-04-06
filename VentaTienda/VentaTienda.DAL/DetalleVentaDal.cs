@@ -65,18 +65,6 @@ namespace VentaTienda.DAL
                 "INNER JOIN VENTA ON DETALLEVENTA.IDVENTA = VENTA.IDVENTA";
             return conexion.EjecutarDataTabla(consulta, "fsdf");
         }
-        public DataTable DetalleVentaDatosVentasDal(int id)
-        {
-            string consulta = "SELECT IDVENTA, FECHAVENTA, TOTALVENTA " +
-                              "FROM  VENTA WHERE IDVENTA = " + id;
-            return conexion.EjecutarDataTabla(consulta, "fsdf");
-        }
-        public DataTable DetalleVentaDatosDetalleDal(int id)
-        {
-            string consulta = "SELECT DETALLEVENTA.IDPRODUCTO, PRODUCTO.NOMBREPRODUCTO, DETALLEVENTA.CANTIDAD, DETALLEVENTA.PRECIOUNITARIO, DETALLEVENTA.TOTALDETALLE " +
-                "FROM  DETALLEVENTA INNER JOIN PRODUCTO ON DETALLEVENTA.IDPRODUCTO = PRODUCTO.IDPRODUCTO " +
-                "WHERE IDDETALLEVENTA = " + id;
-            return conexion.EjecutarDataTabla(consulta, "fsdf");
-        }
+       
     }
 }

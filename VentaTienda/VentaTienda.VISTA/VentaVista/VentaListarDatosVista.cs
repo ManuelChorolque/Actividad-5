@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VentaTienda.BSS;
 using VentaTienda.Modelos;
-using VentaTienda.VISTA.VentaVista;
+using VentaTienda.VISTA.DetalleVentaVista;
 
-namespace VentaTienda.VISTA.DetalleVentaVista
+namespace VentaTienda.VISTA.VentaVista
 {
-    public partial class DetalleVentaMostrarVista : Form
+    public partial class VentaListarDatosVista : Form
     {
-        public DetalleVentaMostrarVista()
+        public VentaListarDatosVista()
         {
             InitializeComponent();
         }
@@ -34,6 +34,7 @@ namespace VentaTienda.VISTA.DetalleVentaVista
         public static int IdDetalleVentaSeleccionado = 0;
         private void button4_Click(object sender, EventArgs e)
         {
+
             DetalleVentaBss bss = new DetalleVentaBss();
             DetalleVentaListarVista fr = new DetalleVentaListarVista();
 
@@ -46,14 +47,15 @@ namespace VentaTienda.VISTA.DetalleVentaVista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DetalleVentaBss bss = new DetalleVentaBss();
-            dataGridView1.DataSource = bss.DetalleVentaDatosVentasBss(IdVentaSeleccionado);
+
+            VentaBss bss = new VentaBss();
+            dataGridView1.DataSource = bss.VentaDatosVentasBss(IdVentaSeleccionado);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DetalleVentaBss bss = new DetalleVentaBss();
-            dataGridView2.DataSource = bss.DetalleVentaDatosDetalleBss(IdVentaSeleccionado);
+            VentaBss bss = new VentaBss();
+            dataGridView2.DataSource = bss.VentaDatosDetalleBss(IdVentaSeleccionado);
         }
     }
 }

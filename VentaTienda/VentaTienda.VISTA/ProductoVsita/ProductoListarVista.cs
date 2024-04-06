@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VentaTienda.BSS;
 using VentaTienda.VISTA.DetalleVentaVista;
+using VentaTienda.VISTA.VentaVista;
 
 namespace VentaTienda.VISTA.ProductoVsita
 {
@@ -27,6 +28,7 @@ namespace VentaTienda.VISTA.ProductoVsita
         {
             DetalleVentaInsertarVista.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DetalleVentaEditarVista.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaVenderVista.IdProductoSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
         private void button2_Click(object sender, EventArgs e)
         {

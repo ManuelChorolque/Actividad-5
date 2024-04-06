@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VentaTienda.BSS;
+using VentaTienda.VISTA.VentaVista;
 
 namespace VentaTienda.VISTA.DetalleVentaVista
 {
@@ -53,15 +54,10 @@ namespace VentaTienda.VISTA.DetalleVentaVista
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            DetalleVentaMostrarVista fr = new DetalleVentaMostrarVista();
-            fr.Show();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DetalleVentaMostrarVista.IdDetalleVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaListarDatosVista.IdDetalleVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
     }
 }

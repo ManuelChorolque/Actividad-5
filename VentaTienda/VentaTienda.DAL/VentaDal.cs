@@ -50,7 +50,20 @@ namespace VentaTienda.DAL
             string consulta = "delete from venta where idventa=" + id;
             conexion.Ejecutar(consulta);
         }
-      
+        public DataTable VentaDatosVentasDal(int id)
+        {
+            string consulta = "SELECT IDVENTA, FECHAVENTA, TOTALVENTA " +
+                              "FROM  VENTA WHERE IDVENTA = " + id;
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
+        public DataTable VentaDatosDetalleDal(int id)
+        {
+            string consulta = "SELECT DETALLEVENTA.IDPRODUCTO, PRODUCTO.NOMBREPRODUCTO, DETALLEVENTA.CANTIDAD, DETALLEVENTA.PRECIOUNITARIO, DETALLEVENTA.TOTALDETALLE " +
+                "FROM  DETALLEVENTA INNER JOIN PRODUCTO ON DETALLEVENTA.IDPRODUCTO = PRODUCTO.IDPRODUCTO " +
+                "WHERE IDDETALLEVENTA = " + id;
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
+
 
     }
 }

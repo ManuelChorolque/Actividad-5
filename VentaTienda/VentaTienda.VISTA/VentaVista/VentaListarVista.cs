@@ -27,7 +27,7 @@ namespace VentaTienda.VISTA.VentaVista
         {
             DetalleVentaInsertarVista.IdVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             DetalleVentaEditarVista.IdVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            DetalleVentaMostrarVista.IdVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaListarDatosVista.IdVentaSeleccionado = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -58,6 +58,16 @@ namespace VentaTienda.VISTA.VentaVista
             }
         }
 
-       
+        private void button5_Click(object sender, EventArgs e)
+        {
+            VentaVenderVista vender = new VentaVenderVista();
+            vender.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            VentaListarDatosVista vender = new VentaListarDatosVista();
+            vender.Show();
+        }
     }
 }
